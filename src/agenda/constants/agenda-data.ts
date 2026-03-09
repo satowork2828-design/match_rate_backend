@@ -5,11 +5,11 @@ export interface AgendaItem {
 }
 
 export const AGENDA_ITEMS: AgendaItem[] = [
-  { id: '1', agendaName: '四半期レビュー', scriptName: 'Q1-レビュー用スクリプト' },
-  { id: '2', agendaName: '製品ロードマップ', scriptName: 'ロードマップ-2025' },
-  { id: '3', agendaName: 'チームスタンドアップ', scriptName: 'デイリースタンドアップ' },
-  { id: '4', agendaName: 'スプリント計画', scriptName: 'スプリント計画-v2' },
-  { id: '5', agendaName: '振り返り', scriptName: '振り返りテンプレート' },
+  { id: '1', agendaName: 'SMS送信テスト', scriptName: 'SMSテスト' },
+  { id: '2', agendaName: '（C）メンズ脱毛専門店RINX', scriptName: 'リンクス' },
+  { id: '3', agendaName: '報告レポートsysテスト', scriptName: '各拠点へ報告' },
+  { id: '4', agendaName: 'デモ', scriptName: 'API用' },
+  { id: '5', agendaName: 'bp9esvuf', scriptName: 'test' },
 ];
 
 export interface RegisteredAgenda {

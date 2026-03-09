@@ -73,7 +73,10 @@ export class AgendaService {
     let filtered = records.filter((r) => r.userName === params.userName);
 
     if (params.status?.trim()) {
-      filtered = filtered.filter((r) => r.status === params.status!.trim());
+      const statusList = params.status.split(/[,、]/).map((s) => s.trim()).filter(Boolean);
+      if (statusList.length > 0) {
+        filtered = filtered.filter((r) => statusList.includes(r.status));
+      }
     }
 
     if (params.responseTime?.trim()) {
