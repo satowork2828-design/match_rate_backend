@@ -2,7 +2,7 @@ export interface ConversationRecord {
     userName: string;
     matchingRate: number;
     status: string;
-    responseTime: Date;
+    responseTime: string;
     keywords: string[];
     conversation_id: string;
 }

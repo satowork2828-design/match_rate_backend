@@ -80,8 +80,8 @@ export class AgendaService {
     }
 
     if (params.responseTime?.trim()) {
-      const threshold = new Date(params.responseTime);
-      filtered = filtered.filter((r) => r.responseTime < threshold);
+      const thresholdDate = params.responseTime.slice(0, 10);
+      filtered = filtered.filter((r) => r.responseTime < thresholdDate);
     }
     if (params.keywords?.trim()) {
       const terms = params.keywords
@@ -104,7 +104,7 @@ export class AgendaService {
       conversation_id: r.conversation_id,
       completionRate: r.matchingRate,
       status: r.status,
-      responseTime: r.responseTime.toISOString(),
+      responseTime: r.responseTime,
     }));
   }
 
@@ -117,7 +117,7 @@ export class AgendaService {
           userName: found.userName,
           matchingRate: found.matchingRate,
           status: found.status,
-          responseTime: found.responseTime.toISOString(),
+          responseTime: found.responseTime,
           keywords: found.keywords,
         };
       }
